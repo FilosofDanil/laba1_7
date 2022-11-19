@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maxim">
+	<link rel="stylesheet" type="text/css" href="css/body.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/body.css">
+	<title>SignUp</title>
+</head>
+<body>
+<header class="header">
+	<div class="logo"><img src="imgs/logo.gif"></div>
+	<div class="element"><a href="/" blank="blank">Home</a></div>
+	<div class="element"><a href="/login" blank="blank">Login</a></div>
+	<div class="element">
+		<div class="dropdown">
+			<button class="dropbutton">Coursers</button>
+	  		<div class="dropdown-content">
+	    	 <a href="#">HTML,CSS,JS</a>
+	   		 <a href="#">Java</a>
+	    	 <a href="#">C++</a>
+	 		</div>
+		</div>
+	</div>
+	<div class="element"><a href="" blank="blank">Donates</a></div>
+</header>
+<content class="log_content">
+		<div class="signcontent">
+		<form action="/Sign">
+			<div class="login">
+				<label class="stat">
+					Стать:
+					<input class="input" type="radio" id="stats" name="stat" value="male" required="required">
+					<label for="choice1">Чоловіча</label>
+					<input class="input" type="radio" id="stats" name="stat" value="fem">
+					<label for="choice2">Жіноча</label>
+				</label>
+				<label class="s_email">
+					E-Mail:
+					<input class="input" type="text" name="login" id="email">
+					<p class="error" id="e_error">error</p>
+				</label>
+				<label class="s_password">
+					Password:
+					<input class="input" type="text" name="password" id="password">
+					<p class="error" id="p_error">error</p>
+				</label>
+				<label class="name">
+					Name:
+					<input class="input" type="text" name="name" id="name" required="required">
+					<p class="error" id="n_error">error</p>
+				</label>
+				<label class="surname">
+					Surname:
+					<input class="input" id="surname" type="text" name="surname" required="required">
+					<p class="error" id="s_error">error</p>
+				</label>
+				<label class="birth">
+					Date of birth:
+					<input class="input" type="date" name="date_of_birth" id="birth" required="required">
+					<p class="error" id="b_error">error</p>
+				</label>
+				<label class="group">
+					Group
+						<select class="spisok" type="text" name="group" id ="group">
+		    				<option value="">Choose a Group</option>
+		    				<option value="IA-11">IA-11</option>
+		    				<option value="IA-12">IA-12</option>
+		    				<option value="IA-13">IA-13</option>
+		    				<option value="IA-14">IA-14</option>
+		   				</select>
+				</label>
+				<label class="tel">
+					Phone
+					<input class="mask" id="mask" type="text" name="Telephone"  placeholder="+38 (___) ___-__-__ ">
+					<p class="error" id="t_error">error</p>
+				</label>
+		    	<!-- <input class="signbut" id="but1" type="submit"/> -->
+	    	</div>
+		 </form>
+		 <button class="signbut" id="but1">SignUp</button>
+	</div>
+		<table class="megatable" id="table1">
+			<thead>
+			    <tr>
+			        <th class ="th" scope="col">Email</th>
+			        <th class ="th" scope="col">Password</th>
+			        <th class ="th" scope="col">Name</th>
+			        <th class ="th" scope="col">Surname</th>
+			        <th class ="th" scope="col">Birth</th>
+			        <th class ="th" scope="col">Stat</th>
+			        <th class ="th" scope="col">Telephone</th>
+			    </tr>
+	    	</thead>
+		    <tbody id="table_body">
+			 	
+		    </tbody>
+		</table>
+	<img class ="sauron"src="imgs/sauron.jpg">
+	<img class ="faramir "src="imgs/Faramir.jpg">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+	<script type="text/javascript" src="/JS/sign.js"></script>
+</content>
+<footer class="footer">
+	<div class="list">
+		<h4>Structure</h4>
+		<a href="/JS">MiddleEarth</a>
+	    <a href="">Valinor</a>
+	    <a href="">Valar</a>
+	</div>
+	<div class="list">
+		<h4>Activities</h4>
+		<a href="">Fellowship</a>
+	    <a href="">Become a King</a>
+	    <a href="">Mordor side</a>
+	</div>
+	<div blank ="blank" class="list">
+		<h4>For rookies</h4>
+		<a href="" blank="blank">Shir</a>
+		<a href="" blank="blank">Travels</a>
+		<a href="" >Tavern</a>
+	</div>
+	<div class="list">
+		<h4>Useful links</h4>
+		<a href="https://t.me/dwarf_strong"><img class="icon" src="imgs/telegram.png">
+		<a href="https://api.whatsapp.com/send?phone=380980648928"><img class="icon" src="imgs/whatsapp.jpg">
+		<a href="mailto:serhio3347@gmail.com"><img class="icon" src="imgs/email.png" alt="Пример">
+		<a class="loh" href="tel:+380980648928"><img class="icon "src="imgs/call.png"></a>
+	</div>
+	<img class="fellowship" src="imgs/foot.png">
+</footer>
+</body>
+</html>
