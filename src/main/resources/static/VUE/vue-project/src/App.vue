@@ -30,11 +30,11 @@
     <form action="/Sign">
       <label class="loh">
         Стать:
-        <label for="choice1">Чоловіча</label>
-        <input class="input" type="radio" id="stats" name="stat" value="male" required="required" checked
+        <label>Чоловіча</label>
+        <input class="input" type="radio" name="stat" value="male" required="required" checked
                v-model="gender">
-        <label for="choice2">Жіноча</label>
-        <input class="input" type="radio" id="stats" name="stat" value="fem" v-model="gender">
+        <label>Жіноча</label>
+        <input class="input" type="radio" name="stat" value="fem" v-model="gender">
       </label>
       <label class="loh">
         E-Mail:
@@ -64,17 +64,22 @@
       </label>
       <label class="loh">
         Group
-        <select v-model="group" class="spisok" type="text" name="group" id="group">
+        <v-select :options="groups"
+            v-model="group"
+            class="spisok" type="text" name="group" id="group"
+           >
+        </v-select>  
+      <!--   <select v-model="group" class="spisok" type="text" name="group" id="group">
           <option value="">Choose a Group</option>
           <option value="IA-11">IA-11</option>
           <option value="IA-12">IA-12</option>
           <option value="IA-13">IA-13</option>
           <option value="IA-14">IA-14</option>
-        </select>
-        <p v-if="err_6" class="error" id="b_error">error</p>
+        </select> -->
+        <p v-if="err_6" class="error">error</p>
       </label>
       <label class="loh">
-        <p v-if="err_7" class="error" id="b_error">error</p>
+        <p v-if="err_7" class="error">error</p>
         <input class="input"
                @input="changePhone()"
                v-model="phone_number"
@@ -149,7 +154,12 @@ export default defineComponent({
     group: '',
     gender: 'Male',
     tabledb: [],
-    checkboxes: []
+    checkboxes: [],
+    groups:[
+      'IA-11',
+      'IA-12',
+      'IA-13',
+      'IA-14',]
 
     // //змінні компонету
     // name: 'Ukraine',
